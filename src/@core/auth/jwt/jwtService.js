@@ -55,9 +55,6 @@ export default class JwtService {
 
                 this.onAccessTokenFetched(r.data.token)
               })
-              .catch(err => {
-                console.log('@root', err)
-              })
           }
           const retryOriginalRequest = new Promise(resolve => {
             this.addSubscriber(accessToken => {
